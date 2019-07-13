@@ -48,4 +48,5 @@ fields:
     step: '1'
     required: true
 pages:
+- content/projects/spendr.md
 - content/projects/test-project-1.md
