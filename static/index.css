@@ -1,6 +1,15 @@
 /* ANCHOR typography */
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.main {
+  position: absolute;
+  top: 45px;
+  bottom: 0px;
+  height: auto;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -22,7 +31,8 @@ p {
 /* ANCHOR header */
 .header {
   padding: 12px;
-  border-bottom: 1px solid black;
+  height: 45px;
+  box-sizing: border-box;
 }
 
 .header--title,
@@ -38,7 +48,8 @@ p {
 
 /* ANCHOR project */
 .projects {
-  margin: 50px;
+  margin: 0px 50px 50px 50px;
+  padding-top: 50px;
 }
 
 .project {
