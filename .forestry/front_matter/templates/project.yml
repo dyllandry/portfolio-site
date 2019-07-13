@@ -22,6 +22,11 @@ fields:
   config:
     maxSize: 250
   label: Thumbnail
+- name: thumbnail_alt_text
+  type: text
+  config:
+    required: false
+  label: Thumbnail Alt Text
 - name: description
   type: textarea
   default: ''
