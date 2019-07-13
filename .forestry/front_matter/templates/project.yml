@@ -31,3 +31,5 @@ fields:
     schema:
       format: markdown
   label: Description
+pages:
+- content/projects/test-project-1.md
