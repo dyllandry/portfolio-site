@@ -48,6 +48,11 @@ p {
   transform: rotate(-1deg);
 }
 
+.header--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header--title,
 .header--subtitle {
   font-size: 21px;
@@ -65,6 +70,7 @@ p {
     display: none;
   }
 }
+
 /* ANCHOR project */
 .projects {
   margin: 0px 50px 50px 50px;
@@ -125,7 +131,7 @@ p {
 
 .project--url {
   display: inline-block;
-  background-color: hsl(690, 50%, 90%);
+  background-color: hsl(190, 80%, 80%);
   border: 2px solid black;
   padding: 3px 6px;
   border-radius: 3px;
@@ -177,4 +183,23 @@ p {
   .project--description {
     margin: 24px;
   }
+}
+
+/* ANCHOR nav */
+.nav--list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav--item {
+  text-decoration: none;
+  margin-left: 16px;
+  /* padding: 3px 6px; */
+  /* background-color: hsla(240, 100%, 90%, 1); */
+  /* border: 2px solid black; */
+  /* border-radius: 3px; */
+  color: black;
 }

@@ -1,5 +1,10 @@
 <header class='header'>
   <div class="header--background"></div>
-  <h1 class='header--title'>{{ .Title }}</h1>
-  <h2 class='header--subtitle'>{{ .Params.Subtitle }}</h2>
+  <div class="header--flex">
+  <div>
+    <h1 class='header--title'>{{ .Title }}</h1>
+    <h2 class='header--subtitle'>{{ .Params.Subtitle }}</h2>
+  </div>
+  {{ partial "header-nav" .}}
+</div>
 </header>
