@@ -1,11 +1,11 @@
 +++
-demo_url = "https://www.youtube.com/"
-description = "Lorem ipsum dolor amet shaman messenger bag air plant, palo santo stumptown hell of artisan. Thundercats try-hard lomo hammock hexagon keytar narwhal unicorn adaptogen meggings pickled."
+demo_url = "https://whitehorsemasonry.com"
+description = "Full masonry image gallery with email contact form. Images are compressed for mobile devices and various screen resolutions to ensure fast loading on even slow networks."
 order = 2
-repository_url = "https://www.google.com/"
-thumbnail = "/uploads/photo-1518331647614-7a1f04cd34cf.jpeg"
-thumbnail_alt = "A screen shot of Test Project 1."
+repository_url = "https://github.com/dyllandry/white-horse-masonry-services"
+thumbnail = "/uploads/screen-shot.png"
+thumbnail_alt = "A screen shot of the White Horse Masonry home page."
 thumbnail_alt_text = "A screenshot of Test Project 1."
-title = "Test Project 1"
+title = "White Horse Masonry"
 
 +++
