@@ -6,11 +6,13 @@
           <div class="project--info">
             <h3 class="project--title">{{ .Params.title }}</h3>
             <div class="project--thumbnail-container__mobile">
-                <img 
-                  class="project--thumbnail"
-                  src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
-                  alt="{{ .Params.thumbnail_alt }}"
-                >
+                <a href="{{ .Params.demo_url }}">
+                  <img 
+                    class="project--thumbnail"
+                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    alt="{{ .Params.thumbnail_alt }}"
+                  >
+                </a>
               </div>
             <div class="project--links">
               <a
@@ -25,11 +27,13 @@
             <p class="project--description">{{ .Params.description }}</p>
           </div>
           <div class="project--thumbnail-container__desktop">
-            <img 
-              class="project--thumbnail"
-              src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
-              alt="{{ .Params.thumbnail_alt }}"
-            >
+              <a href="{{ .Params.demo_url }}">
+                  <img 
+                    class="project--thumbnail"
+                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    alt="{{ .Params.thumbnail_alt }}"
+                  >
+                </a>
           </div>
         </div>
       {{ end }}
