@@ -59,6 +59,12 @@ p {
   margin-right: 12px;
 }
 
+/* ANCHOR header @media */
+@media only screen and (max-width: 470px) {
+  .header--subtitle {
+    display: none;
+  }
+}
 /* ANCHOR project */
 .projects {
   margin: 0px 50px 50px 50px;
@@ -94,7 +100,6 @@ p {
 }
 
 .project--title {
-  font-weight: bold;
   font-size: 28px;
 }
 

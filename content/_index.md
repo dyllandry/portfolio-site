@@ -1,4 +1,4 @@
 ---
-title: Dylan Landry
+title: Dylan L.
 subtitle: Web Developer
 ---
