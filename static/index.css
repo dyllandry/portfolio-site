@@ -141,14 +141,6 @@ p {
   margin-right: 12px;
 }
 
-.project--thumbnail-placeholder {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(194, 194, 194);
-}
-
 /* ANCHOR project @media */
 /* Swap out desktop project thumbnail for mobile thumbnail */
 @media only screen and (max-width: 600px) {
