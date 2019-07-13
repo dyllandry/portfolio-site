@@ -5,7 +5,8 @@
         <div class="project">
           <div class="project--info">
             <h3 class="project--title">{{ .Params.title }}</h3>
-            <div class="project--thumbnail-container__mobile">
+            <div class="project--thumbnail-container project--thumbnail-container__mobile">
+                <div class="project--thumbnail-background"></div>
                 <a href="{{ .Params.demo_url }}">
                   <img 
                     class="project--thumbnail"
@@ -15,18 +16,13 @@
                 </a>
               </div>
             <div class="project--links">
-              <a
-                class="project--repository-url" 
-                href="{{ .Params.repository_url }}"
-              >Repository</a>
-              <a 
-                class="project--demo-url" 
-                href="{{ .Params.demo_url }}"
-              >Live Demo</a>
+              <a class="project--repository-url" href="{{ .Params.repository_url }}"><div class="project--url">Repository</div></a>
+              <a class="project--demo-url" href="{{ .Params.demo_url }}"><div class="project--url">Live Demo</div></a>
             </div>
             <p class="project--description">{{ .Params.description }}</p>
           </div>
-          <div class="project--thumbnail-container__desktop">
+          <div class="project--thumbnail-container project--thumbnail-container__desktop">
+              <div class="project--thumbnail-background"></div>
               <a href="{{ .Params.demo_url }}">
                   <img 
                     class="project--thumbnail"
