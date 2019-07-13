@@ -37,3 +37,70 @@ p {
 }
 
 /* ANCHOR project */
+.projects {
+  margin: 50px;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.project--info,
+.project--thumbnail-container__desktop {
+  width: 50%;
+}
+
+.project--thumbnail-container__desktop {
+  margin-left: 12px;
+}
+
+.project--thumbnail-container__mobile {
+  display: none;
+  margin-bottom: 12px;
+}
+
+.project--thumbnail {
+  width: 100%;
+}
+
+.project--title {
+  font-weight: bold;
+}
+
+.project--title,
+.project--links {
+  margin-bottom: 12px;
+}
+
+.project--repository-url {
+  margin-right: 12px;
+}
+
+/* ANCHOR project @media */
+/* Swap out desktop project thumbnail for mobile thumbnail */
+@media only screen and (max-width: 600px) {
+  .project--info {
+    width: 100%;
+  }
+
+  .project--thumbnail-container__desktop {
+    display: none;
+  }
+
+  .project--thumbnail-container__mobile {
+    display: block;
+  }
+
+  /* Adjust margin for smaller devices */
+  .projects {
+    margin: 0px;
+  }
+
+  .project--title,
+  .project--links,
+  .project--description {
+    margin: 24px;
+  }
+}

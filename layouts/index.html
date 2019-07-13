@@ -1,11 +1,38 @@
 {{ define "main" }}
-  {{ range .Site.Pages }}
-    {{ if and (eq .Type "projects") ( .IsPage ) }}
-      {{ .Params.title }}
-      {{ .Params.repository_url }}
-      {{ .Params.demo_url }}
-      {{ .Params.description }}
-      {{ .Params.thumbnail }}
+  <div class="projects">
+    {{ range .Site.Pages }}
+      {{ if and (eq .Type "projects") ( .IsPage ) }}
+        <div class="project">
+          <div class="project--info">
+            <h3 class="project--title">{{ .Params.title }}</h3>
+            <div class="project--thumbnail-container__mobile">
+                <img 
+                  class="project--thumbnail"
+                  src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                  alt="{{ .Params.thumbnail_alt }}"
+                >
+              </div>
+            <div class="project--links">
+              <a
+                class="project--repository-url" 
+                href="{{ .Params.repository_url }}"
+              >Repository</a>
+              <a 
+                class="project--demo-url" 
+                href="{{ .Params.demo_url }}"
+              >Live Demo</a>
+            </div>
+            <p class="project--description">{{ .Params.description }}</p>
+          </div>
+          <div class="project--thumbnail-container__desktop">
+            <img 
+              class="project--thumbnail"
+              src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+              alt="{{ .Params.thumbnail_alt }}"
+            >
+          </div>
+        </div>
+      {{ end }}
     {{ end }}
-  {{ end }}
+  </div>
 {{ end }}
