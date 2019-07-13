@@ -8,7 +8,15 @@
 </head>
 
 <body>
-
+  {{ range .Site.Pages }}
+    {{ if and (eq .Type "projects") ( .IsPage ) }}
+      {{ .Params.title }}
+      {{ .Params.repository_url }}
+      {{ .Params.demo_url }}
+      {{ .Params.description }}
+      {{ .Params.thumbnail }}
+    {{ end }}
+  {{ end }}
 </body>
 
 </html>
