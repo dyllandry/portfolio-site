@@ -8,6 +8,7 @@
             <div class="project--thumbnail-container project--thumbnail-container__mobile">
                 <div class="project--thumbnail-background"></div>
                 <a href="{{ .Params.demo_url }}">
+                  <div class="project--thumbnail-placeholder"></div>
                   <img 
                     class="project--thumbnail"
                     src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
@@ -24,6 +25,7 @@
           <div class="project--thumbnail-container project--thumbnail-container__desktop">
               <div class="project--thumbnail-background"></div>
               <a href="{{ .Params.demo_url }}">
+                  <div class="project--thumbnail-placeholder"></div>
                   <img 
                     class="project--thumbnail"
                     src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
