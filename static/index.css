@@ -85,6 +85,10 @@ p {
   margin-bottom: 12px;
 }
 
+.project--thumbnail-container__mobile {
+  max-width: 650px;
+}
+
 .project--thumbnail {
   width: 100%;
 }
@@ -143,7 +147,7 @@ p {
 
 /* ANCHOR project @media */
 /* Swap out desktop project thumbnail for mobile thumbnail */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   .project--info {
     width: 100%;
   }
@@ -154,6 +158,7 @@ p {
 
   .project--thumbnail-container__mobile {
     display: block;
+    margin: 0 auto;
   }
 
   /* Adjust margin for smaller devices */
