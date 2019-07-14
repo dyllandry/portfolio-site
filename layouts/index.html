@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="projects">
-    {{ range .Site.Pages }}
+    {{ range sort .Site.Pages "Params.order" }}
       {{ if and (eq .Type "projects") ( .IsPage ) }}
         <div class="project">
           <div class="project--info">
