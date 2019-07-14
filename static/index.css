@@ -257,6 +257,8 @@ p {
 }
 
 .nav--item {
+  position: relative;
+  z-index: 3;
   text-decoration: none;
   margin-left: 16px;
   color: black;
