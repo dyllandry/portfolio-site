@@ -89,6 +89,7 @@ p {
 .header--flex {
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -114,6 +115,7 @@ p {
 .projects {
   margin: 0px auto 50px auto;
   padding-top: 50px;
+  max-width: 1200px;
 }
 
 .project {
