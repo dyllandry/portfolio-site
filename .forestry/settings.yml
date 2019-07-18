@@ -9,7 +9,7 @@ sections:
   label: Projects
   create: documents
   match: "*"
-upload_dir: static/uploads
+upload_dir: content/uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
