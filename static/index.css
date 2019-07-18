@@ -9,6 +9,7 @@ body {
   top: 45px;
   bottom: 0px;
   height: auto;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -88,6 +89,7 @@ p {
 .header--flex {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header--title,
@@ -110,7 +112,7 @@ p {
 
 /* ANCHOR project */
 .projects {
-  margin: 0px 50px 50px 50px;
+  margin: 0px auto 50px auto;
   padding-top: 50px;
 }
 
@@ -139,8 +141,10 @@ p {
 }
 
 .project--thumbnail {
-  width: 100%;
+  width: calc(100% - 20px);
+  margin-left: 10px;
   transition: transform 0.25s;
+  box-shadow: 0 0 20px -11px black;
 }
 
 .project--title {
@@ -184,10 +188,10 @@ p {
 
 @keyframes skew-rotate {
   from {
-    transform: rotate(-5deg) scaleY(1.08) skewY(3deg) skewX(3deg);
+    transform: rotate(-5deg) scaleY(1.08) skewY(3deg) skewX(3deg) scaleX(1.0);
   }
   to {
-    transform: rotate(5deg) scaleY(1) skewY(-3deg) skewX(-3deg);
+    transform: rotate(5deg) scaleY(1) skewY(-3deg) skewX(-3deg) scaleX(1.1);
   }
 }
 

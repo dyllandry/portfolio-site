@@ -2,15 +2,44 @@
   <div class="projects">
     {{ range sort .Site.Pages "Params.order" }}
       {{ if and (eq .Type "projects") ( .IsPage ) }}
+        {{ $thumbnailScratch := newScratch }}
+        {{ with .Params.thumbnail }}
+          {{ $thumbnailResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .) }}
+          {{ $placeholder := ($thumbnailResource.Resize "25x 100q" )}}
+          {{ $600w := ($thumbnailResource.Resize "600x" )}}
+          {{ $800w := ($thumbnailResource.Resize "800x" )}}
+          {{ $1000w := ($thumbnailResource.Resize "1000x" )}}
+          {{ $1200w := ($thumbnailResource.Resize "1200x" )}}
+          {{ $srcset := ""}}
+          {{ if ge $thumbnailResource.Width "600" }}
+            {{ $srcset = print $srcset $.Site.BaseURL $600w.RelPermalink " 600w," }}
+          {{ end }}
+          {{ if ge $thumbnailResource.Width "800" }}
+            {{ $srcset = print $srcset $.Site.BaseURL $800w.RelPermalink " 800w," }}
+          {{ end }}
+          {{ if ge $thumbnailResource.Width "1000" }}
+            {{ $srcset = print $srcset $.Site.BaseURL $1000w.RelPermalink " 1000w," }}
+          {{ end }}
+          {{ if ge $thumbnailResource.Width "1200" }}
+            {{ $srcset = print $srcset $.Site.BaseURL $1200w.RelPermalink " 1200w" }}
+          {{ end }}
+          {{ $thumbnailScratch.Set "srcset" $srcset}}
+          {{ $thumbnailScratch.Set "placeholder" $placeholder}}
+        {{ end }}
         <div class="project">
           <div class="project--info">
             <h3 class="project--title">{{ .Params.title }}</h3>
             <div class="project--thumbnail-container project--thumbnail-container__mobile">
                 <div class="project--thumbnail-background"></div>
                 <a href="{{ .Params.demo_url }}">
-                  <img 
+                    <img 
                     class="project--thumbnail"
-                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    {{ if $thumbnailScratch.Get "placeholder" }}
+                      src="{{ .Site.BaseURL }}{{ ($thumbnailScratch.Get "placeholder").RelPermalink }}"
+                        srcset={{ $thumbnailScratch.Get "srcset" }}
+                    {{ else }}
+                      src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    {{ end }}
                     alt="{{ .Params.thumbnail_alt }}"
                   >
                 </a>
@@ -26,7 +55,12 @@
               <a href="{{ .Params.demo_url }}">
                   <img 
                     class="project--thumbnail"
-                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    {{ if $thumbnailScratch.Get "placeholder" }}
+                      src="{{ .Site.BaseURL }}{{ ($thumbnailScratch.Get "placeholder").RelPermalink }}"
+                        srcset={{ $thumbnailScratch.Get "srcset" }}
+                    {{ else }}
+                      src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    {{ end }}
                     alt="{{ .Params.thumbnail_alt }}"
                   >
                 </a>
