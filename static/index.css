@@ -1,6 +1,5 @@
-/* ANCHOR typography */
+/* ANCHOR body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
 }
 
@@ -12,6 +11,20 @@ body {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+/* ANCHOR body @media */
+@media only screen and (max-width: 950px) {
+  .main {
+    margin: 0;
+  }
+}
+
+/* ANCHOR typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
