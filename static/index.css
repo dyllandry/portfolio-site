@@ -145,8 +145,12 @@ p {
 .project--thumbnail {
   width: calc(100% - 20px);
   margin-left: 10px;
-  transition: transform 0.25s;
+  transition: transform 0.25s, filter 1s;
   box-shadow: 0 0 20px -11px black;
+}
+
+.lazy {
+  filter: blur(3px);
 }
 
 .project--title {
@@ -164,6 +168,7 @@ p {
 }
 
 .project--thumbnail-container:hover .project--thumbnail-background {
+  transition: background-color 0.5s;
   background-color: hsla(0, 80%, 80%, 1);
 }
 
@@ -177,7 +182,6 @@ p {
   z-index: -2;
   width: 100%;
   height: 100%;
-  transition: background-color 0.5s;
   box-shadow: 0 0 10px -6px black inset;
   animation-duration: 6s;
   animation-name: skew-rotate;
