@@ -32,12 +32,13 @@
             <div class="project--thumbnail-container project--thumbnail-container__mobile">
                 <div class="project--thumbnail-background"></div>
                 <a href="{{ .Params.demo_url }}">
-                    <img 
-                    class="project--thumbnail"
+                  <img 
                     {{ if $thumbnailScratch.Get "placeholder" }}
+                      class="project--thumbnail lazy"
                       src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
-                      srcset={{ $thumbnailScratch.Get "srcset" }}
+                      data-srcset={{ $thumbnailScratch.Get "srcset" }}
                     {{ else }}
+                      class="project--thumbnail"
                       src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
                     {{ end }}
                     alt="{{ .Params.thumbnail_alt }}"
@@ -53,17 +54,18 @@
           <div class="project--thumbnail-container project--thumbnail-container__desktop">
               <div class="project--thumbnail-background"></div>
               <a href="{{ .Params.demo_url }}">
-                  <img 
+                <img 
+                  {{ if $thumbnailScratch.Get "placeholder" }}
+                    class="project--thumbnail lazy"
+                    src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
+                    data-srcset={{ $thumbnailScratch.Get "srcset" }}
+                  {{ else }}
                     class="project--thumbnail"
-                    {{ if $thumbnailScratch.Get "placeholder" }}
-                      src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
-                      srcset={{ $thumbnailScratch.Get "srcset" }}
-                    {{ else }}
-                      src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
-                    {{ end }}
-                    alt="{{ .Params.thumbnail_alt }}"
-                  >
-                </a>
+                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                  {{ end }}
+                  alt="{{ .Params.thumbnail_alt }}"
+                >
+              </a>
           </div>
         </div>
       {{ end }}
