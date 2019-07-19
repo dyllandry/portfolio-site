@@ -1,6 +1,5 @@
-/* ANCHOR typography */
+/* ANCHOR body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
 }
 
@@ -12,6 +11,20 @@ body {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+/* ANCHOR body @media */
+@media only screen and (max-width: 950px) {
+  .main {
+    margin: 0;
+  }
+}
+
+/* ANCHOR typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -145,8 +158,12 @@ p {
 .project--thumbnail {
   width: calc(100% - 20px);
   margin-left: 10px;
-  transition: transform 0.25s;
+  transition: transform 0.25s, filter 1s;
   box-shadow: 0 0 20px -11px black;
+}
+
+.lazy {
+  filter: blur(3px);
 }
 
 .project--title {
@@ -164,6 +181,7 @@ p {
 }
 
 .project--thumbnail-container:hover .project--thumbnail-background {
+  transition: background-color 0.5s;
   background-color: hsla(0, 80%, 80%, 1);
 }
 
@@ -177,7 +195,6 @@ p {
   z-index: -2;
   width: 100%;
   height: 100%;
-  transition: background-color 0.5s;
   box-shadow: 0 0 10px -6px black inset;
   animation-duration: 6s;
   animation-name: skew-rotate;

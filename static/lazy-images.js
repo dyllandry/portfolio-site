@@ -10,7 +10,13 @@
     var lazyImages = document.querySelectorAll('img.lazy')
     lazyImages.forEach(function (image) {
       var success = setSrcsetFromDataAttr(image)
-      if (!success) console.warn('Image has lazy class but lacks data-srcset.')
+      if (!success) {
+        console.warn('Image has lazy class but lacks data-srcset.')
+      } else {
+        image.onload = function removeLazyClass () {
+          image.classList.remove('lazy')
+        }
+      }
     })
   })
 
