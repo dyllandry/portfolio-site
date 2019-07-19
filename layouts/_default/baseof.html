@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Site.Title }}</title>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}reset.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}index.css">
+  {{ partial "styles/styles" .}}
 </head>
 
 <body>
@@ -16,7 +15,7 @@
     {{ end }}
   </main>
 
-  <script src="{{ .Site.BaseURL }}lazy-images.js"></script>
+  {{ partial "scripts/lazy-images.html" . }}
 </body>
 
 </html>
