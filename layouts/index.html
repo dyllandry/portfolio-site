@@ -34,12 +34,15 @@
                 <a href="{{ .Params.demo_url }}">
                   <img 
                     {{ if $thumbnailScratch.Get "placeholder" }}
-                      class="project--thumbnail lazy"
                       src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
-                      data-srcset={{ $thumbnailScratch.Get "srcset" }}
+                    {{ else }}
+                      src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                    {{ end }}
+                    {{ if $thumbnailScratch.Get "srcset" }}
+                      class="project--thumbnail lazy"
+                      data-srcset="{{ $thumbnailScratch.Get "srcset" }}"
                     {{ else }}
                       class="project--thumbnail"
-                      src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
                     {{ end }}
                     alt="{{ .Params.thumbnail_alt }}"
                   >
@@ -56,12 +59,15 @@
               <a href="{{ .Params.demo_url }}">
                 <img 
                   {{ if $thumbnailScratch.Get "placeholder" }}
-                    class="project--thumbnail lazy"
                     src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
-                    data-srcset={{ $thumbnailScratch.Get "srcset" }}
+                  {{ else }}
+                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
+                  {{ end }}
+                  {{ if $thumbnailScratch.Get "srcset" }}
+                    class="project--thumbnail lazy"
+                    data-srcset="{{ $thumbnailScratch.Get "srcset" }}"
                   {{ else }}
                     class="project--thumbnail"
-                    src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
                   {{ end }}
                   alt="{{ .Params.thumbnail_alt }}"
                 >
