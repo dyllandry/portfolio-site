@@ -35,8 +35,8 @@
                     <img 
                     class="project--thumbnail"
                     {{ if $thumbnailScratch.Get "placeholder" }}
-                      src="{{ .Site.BaseURL }}{{ ($thumbnailScratch.Get "placeholder").RelPermalink }}"
-                        srcset={{ $thumbnailScratch.Get "srcset" }}
+                      src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
+                      srcset={{ $thumbnailScratch.Get "srcset" }}
                     {{ else }}
                       src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
                     {{ end }}
@@ -56,8 +56,8 @@
                   <img 
                     class="project--thumbnail"
                     {{ if $thumbnailScratch.Get "placeholder" }}
-                      src="{{ .Site.BaseURL }}{{ ($thumbnailScratch.Get "placeholder").RelPermalink }}"
-                        srcset={{ $thumbnailScratch.Get "srcset" }}
+                      src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
+                      srcset={{ $thumbnailScratch.Get "srcset" }}
                     {{ else }}
                       src="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
                     {{ end }}
