@@ -1,10 +1,11 @@
 ;(function lazyImages () {
 
   /**
-   * Set image srcset attribute on load to prevent content reflow. If conducted
-   * on DOMContentLoaded, browser tries to use srcset image prior to embed
-   * base64 images appearing on document. As higher resolution images load, text
-   * content will jump.
+   * Set srcset attributes on images so browser can pick appropriate size for
+   * device screen size. Conduct on load event so placeholder images have a
+   * chance to appear on the page. Conducting on DOMContentLoaded will replace
+   * the placeholder images before they have a chance to appear and cause a
+   * content reflow.
    */
   window.addEventListener('load', function () {
     var lazyImages = document.querySelectorAll('img.lazy')
