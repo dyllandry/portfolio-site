@@ -16,3 +16,9 @@ $RECYCLE.BIN/
 
 # VsCode files
 .vscode/
+
+# Npm packages
+node_modules/
+
+# Partials built by gulp
+**/partials/built

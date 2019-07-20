@@ -4,7 +4,7 @@
   "description": "Dylan Landry's portfolio site made with Hugo.",
   "scripts": {
     "start": "npx hugo server -s src/hugo -d ../../dist",
-    "build": "npx hugo -s src/hugo -d ../../dist",
+    "build": "npx rimraf dist && npx hugo -s src/hugo -d ../../dist",
     "build:serve": "npm run build && npx http-server dist"
   },
   "repository": {
@@ -16,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/dyllandry/portfolio-site/issues"
   },
-  "homepage": "https://github.com/dyllandry/portfolio-site#readme"
+  "homepage": "https://github.com/dyllandry/portfolio-site#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "pump": "^3.0.0",
+    "rimraf": "^2.6.3"
+  }
 }
