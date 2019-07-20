@@ -1,6 +1,8 @@
-# Hugo default output directory
-/public
-/resources
+# Build directory
+/dist
+
+# Hugo built resources
+**/hugo/resources
 
 ## OS Files
 # Windows
