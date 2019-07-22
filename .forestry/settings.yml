@@ -5,11 +5,11 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/projects
+  path: src/hugo/content/projects
   label: Projects
   create: documents
   match: "*"
-upload_dir: content/uploads
+upload_dir: src/hugo/content/uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
