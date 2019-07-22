@@ -11,15 +11,18 @@ test.](lighthouse_test_results/lighthouse_seo.svg)
 The umpteenth iteration of Dylan's portfolio site. Made with the [Hugo static
 site generator](https://gohugo.io/) 🐹.
 
+[GitHub repository](https://github.com/dyllandry/portfolio-site/).
+
+[Live site](https://www.dylanlandry.com) as of July 22nd, 2019.
+
 ![A screen shot of Dylan Landry's portfolio
 site.](portfolio-site-screenshot.jpg)
 
 ## Install
-The [Hugo cli](https://gohugo.io/) is the only dependency. Follow the [Hugo Getting Started](https://gohugo.io/getting-started/installing/) article to install it.
+- `npm install`
+- Install the [Hugo cli](https://gohugo.io/). Follow the [Hugo Getting Started article](https://gohugo.io/getting-started/installing/).
 
 ## Scripts
-While the Hugo cli is used to build and serve the project, I included a `package.json` file so I can use npm scripts that I am more used to.
-- `npm start`: Starts development server. Short for `npx hugo server`.
-- `npm build`: Builds to the `public/` directory. Short for `npx hugo`.
-- `npm build:serve`: Builds and serves. Short for `npx hugo && npx http-server
-  public/`.
+- `npm start`: Starts the hugo server and gulp watch task to re-inline changed javascript files located in `src/inline-scripts`.
+- `npm run build`: Builds the site into the `dist` directory.
+- `npm run preview`: Builds the site into the `dist` directroy and uses [http-server](https://www.npmjs.com/package/http-server) to locally host it.
