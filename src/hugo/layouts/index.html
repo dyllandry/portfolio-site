@@ -52,7 +52,12 @@
               <a class="project--link" href="{{ .Params.repository_url }}"><div class="project--url">Repository</div></a>
               <a class="project--link" href="{{ .Params.demo_url }}"><div class="project--url">Live Demo</div></a>
             </div>
-            <p class="project--description">{{ .Params.description }}</p>
+            <p class="project--description">
+              {{ .Params.description }}
+              {{ if isset .Params "blog_post_url" }}
+                <a href="{{ .Params.blog_post_url }}">Read more...</a>
+              {{ end }}
+            </p>
           </div>
           <div class="project--thumbnail-container project--thumbnail-container__desktop">
               <div class="project--thumbnail-background"></div>
