@@ -4,7 +4,7 @@
   "description": "Dylan Landry's portfolio site made with Hugo.",
   "scripts": {
     "start": "npx hugo server -s src/hugo -d ../../dist",
-    "build": "npx rimraf dist && npx gulp jsToHtmlPartial && npx hugo -s src/hugo -d ../../dist",
+    "build": "npx rimraf dist && npx gulp build && npx hugo -s src/hugo -d ../../dist",
     "build:serve": "npm run build && npx http-server dist"
   },
   "repository": {

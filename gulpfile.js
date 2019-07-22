@@ -22,4 +22,4 @@ function jsToHtmlPartial () {
   )
 }
 
-exports.jsToHtmlPartial = jsToHtmlPartial
+exports.build = jsToHtmlPartial
