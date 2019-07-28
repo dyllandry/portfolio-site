@@ -393,6 +393,13 @@
     }
   }
 
+  @media only screen and (max-width: 470px) {
+    .main {
+      top: 65px;
+      padding-top: 20px;
+    }
+  }
+
   /* ANCHOR typography */
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -453,7 +460,6 @@
     top: -1px;
     position: absolute;
     left: 0px;
-    height: 45px;
     animation-duration: 60s;
     animation-name: slide;
     animation-iteration-count: infinite;
@@ -488,10 +494,31 @@
     margin-right: 12px;
   }
 
+  .mobile-subtitle {
+    display: none;
+    margin-top: 6px;
+    white-space: nowrap;
+  }
+
   /* ANCHOR header @media */
   @media only screen and (max-width: 470px) {
+    .header {
+      height: 65px;
+    }
+
     .header--subtitle {
       display: none;
+    }
+    .mobile-subtitle {
+      display: block;
+    }
+
+    .header--background {
+      transform: rotate(-3deg);
+    }
+
+    .header--background-border {
+      animation-duration: 30s;
     }
   }
 

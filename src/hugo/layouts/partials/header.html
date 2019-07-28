@@ -4,10 +4,11 @@
     <div class="header--background-border"></div>
   </div>
   <div class="header--flex">
-  <div>
-    <h1 class='header--title'>{{ .Title }}</h1>
-    <h2 class='header--subtitle'>{{ .Params.Subtitle }}</h2>
+    <div>
+      <h1 class='header--title'>{{ .Title }}</h1>
+      <h4 class="mobile-subtitle">{{ .Params.Subtitle }}</h4>
+      <h2 class='header--subtitle'>{{ .Params.Subtitle }}</h2>
+    </div>
+    {{ partial "header-nav" .}}
   </div>
-  {{ partial "header-nav" .}}
-</div>
 </header>
