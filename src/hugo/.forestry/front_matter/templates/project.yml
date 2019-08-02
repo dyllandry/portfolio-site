@@ -52,3 +52,5 @@ fields:
     max: 
     step: '1'
     required: true
+pages:
+- src/hugo/content/projects/according-to.md
