@@ -56,7 +56,7 @@
             </div>
             <p class="project--description">
               {{ .Params.description }}
-              {{ if isset .Params "blog_post_url" }}
+              {{ if  and (isset .Params "blog_post_url") (ne .Params.blog_post_url "")}}
                 <a href="{{ .Params.blog_post_url }}">Read more...</a>
               {{ end }}
             </p>
