@@ -50,7 +50,9 @@
               </div>
             <div class="project--links">
               <a class="project--link" href="{{ .Params.repository_url }}"><div class="project--url">Repository</div></a>
-              <a class="project--link" href="{{ .Params.demo_url }}"><div class="project--url">Live Demo</div></a>
+              {{ if ne .Params.demo_url "" }}
+                <a class="project--link" href="{{ .Params.demo_url }}"><div class="project--url">Live Demo</div></a>
+              {{ end }}
             </div>
             <p class="project--description">
               {{ .Params.description }}
@@ -61,7 +63,11 @@
           </div>
           <div class="project--thumbnail-container project--thumbnail-container__desktop">
               <div class="project--thumbnail-background"></div>
-              <a href="{{ .Params.demo_url }}">
+              {{ if ne .Params.demo_url "" }}
+                <a href="{{ .Params.demo_url }}">
+              {{ else }}
+                <a href="{{ .Params.repository_url }}">
+              {{ end }}
                 <img 
                   {{ if $thumbnailScratch.Get "placeholder" }}
                     src="data:image/jpeg;base64,{{ ($thumbnailScratch.Get "placeholder").Content | base64Encode }}"
