@@ -2,7 +2,6 @@
 blog_post_url = ""
 demo_url = ""
 description = "🌎 Disarm opinions and blog your perspective on world events. Heavy use of Test Driven Development. Made withReact, Jest, Chai, Sinon, and Strapi."
-draft = true
 order = 2
 repository_url = "https://github.com/dyllandry/according-to-client"
 thumbnail = "/uploads/according-to-client_2-8-19.png"
